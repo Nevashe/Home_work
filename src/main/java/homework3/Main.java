@@ -1,6 +1,5 @@
 package homework3;
 
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -47,7 +46,7 @@ public class Main {
                 System.out.println("Try further:)");
                 attempt = scanner.next();
             }
-        } while (attempt != sekretword);
+        } while (!attempt.equals(sekretword));
         scanner.close();
     }
 
