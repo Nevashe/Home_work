@@ -65,5 +65,5 @@ public class Main {
             System.out.println(god + " не високосный");
         }
     }
-
+// Вношу изменения
 }

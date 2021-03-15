@@ -124,6 +124,45 @@ public class Main {
         return arr;
     }
 */
+
+
+    public static boolean sixth1(int[] arr) {
+        if ( arr.length < 4){
+            return false;
+        }
+        int sum1 = 0;
+        int sum2 = arr[arr.length - 1] + arr[arr.length - 2];
+        for (int i = 0; i < arr.length; i++) {
+            sum1 += arr[i];
+        }
+        if ((sum1 + sum2) % 2 != 0) {
+            return false;
+        }
+        for (int i = 1; i < arr.length - 2; i++) {
+            sum1 -= arr[i];
+            sum2 += arr[i];
+            if (sum1 == sum2) {
+                return true;
+            }
+        }
+        return false;
+    }static void shiftArr(int arr [], int n) {
+        int temp = arr[0];
+        int currentIndex = n;
+        int jumps = 1;
+
+        while(jumps <= arr.length) {
+            int swap = arr[currentIndex % arr.length];
+            arr[currentIndex % arr.length] = temp;
+            temp = swap;
+            if ((jumps * n) % arr.length == 0) {
+                currentIndex++;
+                temp = arr[currentIndex % arr.length];
+            }
+            currentIndex += n;
+            jumps++;
+        }
+    }
 }
 
 
